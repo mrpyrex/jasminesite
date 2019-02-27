@@ -1,0 +1,17 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: pink;
+    box-sizing: border-box;
+}
+
+.slider .slides li .caption {
+    color: red;
+    position: absolute;
+    top: 30% !important;
+    left: 15%;
+    width: 70%;
+    opacity: 0;
+}
