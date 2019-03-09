@@ -9,64 +9,69 @@
     <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>JasmineCakes</title>
 </head>
 <body>
     
-    <nav class="nav-wrapper">
+    <nav class="container nav-wrapper navbar-fixed">
         <div class="container">
-            <div class="nav-wrapper navbar-fixed">
+            <div class="nav-wrapper">
                 <a href="{% url 'pages:home' %}" class="brand-logo">JasmineCakes</a>
                 <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                <li><a href="">About Us</a></li>
-                <li><a href="">Gallery</a></li>
+                <li><a href="{% url 'pages:about' %}">About Us</a></li>
+                <li><a href="{% url 'pages:gallery' %}">Gallery</a></li>
                 <li><a href="{% url 'contact:contact' %}">Contact Us</a></li>
-                <li><a href="">Blog</a></li>
+                <li><a href="{% url 'blog:blog-home' %}">Blog</a></li>
                 </ul>
             </div>
         </div>
     </nav>
             
-    <ul class="sidenav pink lighten-3" id="mobile-nav">
-        <li><a href="">About Us</a></li>
-        <li><a href="">Gallery</a></li>
+    <ul class="sidenav peach lighten-3" id="mobile-nav">
+        <li><a href="{% url 'pages:about' %}">About Us</a></li>
+        <li><a href="{% url 'pages:gallery' %}">Gallery</a></li>
         <li><a href="{% url 'contact:contact' %}">Contact Us</a></li>
-        <li><a href="">Blog</a></li>
+        <li><a href="{% url 'blog:blog-home' %}">Blog</a></li>
     </ul> 
 
     <!-- Django Template Tags -->
-    {% block content %}
-    {% endblock %}
-    <footer class="page-footer">
-            <div class="container">
-              <div class="row">
-                <div class="col l6 s12">
-                  <h5 class="white-text">Footer Content</h5>
-                  <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                  <h5 class="white-text">We're Social. Follow Us!</h5>
-                  <i class="fab fa-twitter"></i>
-                  <i class="fab fa-facebook"></i>
-                  <i class="fab fa-instagram"></i>
-                  <ul>
-                    <li><a class="grey-text text-lighten-3" href="#!">About Us</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Gallery</a></li>
-                    <li><a class="grey-text text-lighten-3" href="{% url 'contact:contact' %}">Contact Us</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Blog</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="footer-copyright center">
+    <div class="container purple lighten-4 z-depth-5">
+      {% block content %}
+      {% endblock %}
+      <footer class="page-footer">
               <div class="container">
-              &copy; 2018 Jasmine Cakes and Chops Co.
+                <div class="row">
+                  <div class="address col m6 s12">
+                    <h5 class="white-text">Come visit us!</h5>
+                    <p class="grey-text text-lighten-4">14, Ring Road, Idua Eket, Akwa Ibom State</p>
+                    <p><i class="fas fa-phone"></i> +234 7080230375</p>
+                  </div>
+                  <div class="social col m6 s12">
+                    <h5 class="white-text">Follow Us on social!</h5>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>                   
+                    <ul>
+                      <li><a class="grey-text text-lighten-3" href="{% url 'pages:about' %}">About Us</a></li>
+                      <li><a class="grey-text text-lighten-3" href="{% url 'pages:gallery' %}">Gallery</a></li>
+                      <li><a class="grey-text text-lighten-3" href="{% url 'contact:contact' %}">Contact Us</a></li>
+                      <li><a class="grey-text text-lighten-3" href="{% url 'blog:blog-home' %}">Blog</a></li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-            </div>
-          </footer>
-        
+              <div class="footer-copyright center">
+                <div class="container">
+                &copy; {% now 'Y' %} Jasmine Cakes and Chops Co.| <a href="">Policy</a>
+                </div>
+              </div>
+            </footer>
+          
+    </div>
+    
     <script src="{% static 'js/materialize.min.js' %}"></script>
 
     <!-- Mobile Navbar -->

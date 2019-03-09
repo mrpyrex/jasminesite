@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+    <section id="gallery" class="section container">
+    <h1>Gallery</h1>
+    <br>
+    <div class="row">
+        {% for job in jobs %}
+        <div class="col s12 m6">
+            <div class="card">
+            <div class="card-image">
+                <img src="{{ job.image.url }}" alt="{{ job.theme|upper }}" class="materialboxed responsive-img">
+                <span class="card-title">Theme: {{ job.theme|upper }}</span>
+            </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    </section>    
+{% endblock %}

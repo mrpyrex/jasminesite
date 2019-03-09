@@ -2,16 +2,70 @@
     padding: 0;
     margin: 0;
 }
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
 body {
-    background-color: pink;
+    background: url('../img/pic1.jpg') no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
     box-sizing: border-box;
+    font-family: 'Kaushan Script', cursive;
 }
 
 .slider .slides li .caption {
-    color: red;
+    color: rgb(100, 16, 16);
     position: absolute;
     top: 30% !important;
     left: 15%;
     width: 70%;
     opacity: 0;
+}
+
+#gallery .responsive-img {
+    margin-top: 10px;
+}
+
+label {
+    font-size: 1rem;
+    color: #470c0c;
+}
+
+#welcome {
+    padding: 3rem;
+}
+
+#welcome a {
+    margin-top: 2rem; 
+}
+
+#contact .waves-effect {
+    margin-top: 1rem;
+    display: block;
+}
+#contact input[type="file"] {
+    padding: 1rem;
+    border: none;
+    color: #470c0c;
+    font-family: 'Kaushan Script', cursive;
+}
+
+::placeholder {
+    color: red;
+    font-family: 'Kaushan Script', cursive;
+    font-size: smaller;
+}
+
+.page-footer .fab {
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    color: #470c0c;
+}
+
+@media(max-width:700px){
+    .page-footer .address {
+        margin-bottom: 1rem;
+    }
 }

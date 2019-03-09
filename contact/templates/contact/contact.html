@@ -1,11 +1,11 @@
 {% extends 'layout.html' %}
     
 {% block content %}
-<div id="contact" class="container">
+<div id="contact">
     <div class="row">
         <div id="contact-form" class="col s12 m8 offset-m2">
             <h1>Contact Us</h1>
-            <form method="POST" action="{% url 'contact:contact' %}">{% csrf_token %}
+            <form enctype="multipart/form-data" method="POST" action="{% url 'contact:contact' %}">{% csrf_token %}
                 {{ form }}
                 <button class="btn waves-effect waves-light" type="submit"><i class="fab fa-telegram-plane"></i>Send</button>
             </form>

@@ -8,76 +8,41 @@
                 <li>
                 <img class="responsive-img" src="{% static 'img/bday.jpg' %}" alt="">
                 <div class="caption center-align">
-                    <h3>This is our big Tagline!</h3>
-                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                    <a href="#" class="waves-effect waves-light btn">order online</a>
+                    <h2>Eeryday is someone's birthday!</h2>
+                    
+                    <br>
+                    <a href="{% url 'contact:contact' %}" class="waves-effect waves-light btn">order online</a>
                 </div>
                 </li>
                 <li>
                 <img class="responsive-img" src="{% static 'img/wedding.jpg' %}" alt="">
                 <div class="caption left-align">
-                    <h3>Left Aligned Caption</h3>
-                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                    <a href="#" class="waves-effect waves-light btn">order online</a>
+                    <h2>We are mad about wedding cakes!</h2>
+                    
+                    <br>
+                    <a href="{% url 'contact:contact' %}" class="waves-effect waves-light btn">order online</a>
                 </div>
                 </li>
             </ul>
         </div>
     </header>
 
-    <section class="section center">
+    <section id="welcome" class="section center">
         <h2>Welcome To Jasmine Bakery</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga repellat ex, ipsa asperiores molestiae fugit! Corrupti maiores voluptate praesentium porro eveniet nulla provident? Itaque, ipsa saepe? Quis dolorum repudiandae numquam quo saepe aliquam, quae iusto veniam autem illum amet minus eius laborum culpa neque labore quisquam dignissimos. Modi, possimus rem?</p>
-        <a href="#" class="waves-effect waves-light btn">about us</a>
-        <a href="#" class="waves-effect waves-light btn">order online</a>
+        <a href="{% url 'pages:about' %}" class="waves-effect waves-light btn">about us</a>
+        <a href="{% url 'contact:contact' %}" class="waves-effect waves-light btn">order online</a>
     </section>
 
-    <section id="gallery" class="section center">
+    <!-- <section id="gallery" class="section center">
         <div class="container">
             <h3>Busy Fingers</h3>
             <div class="row">
                 <div class="col s12 m3">
                     <img src="{% static 'img/bday.jpg' %}" alt="" class="materialboxed responsive-img">
                 </div>
-                <div class="col s12 m3">
-                    <img src="{% static 'img/bday.jpg' %}" alt="" class="materialboxed responsive-img">
-                </div>
-                <div class="col s12 m3">
-                    <img src="{% static 'img/bday.jpg' %}" alt="" class="materialboxed responsive-img">
-                </div>
-                <div class="col s12 m3">
-                    <img src="{% static 'img/bday.jpg' %}" alt="" class="materialboxed responsive-img">
-                </div>
             </div>
-            <div class="row">
-                <div class="col s12 m3">
-                    <img src="{% static 'img/bday.jpg' %}" alt="" class="materialboxed responsive-img">
-                </div>
-                <div class="col s12 m3">
-                    <img src="{% static 'img/bday.jpg' %}" alt="" class="materialboxed responsive-img">
-                </div>
-                <div class="col s12 m3">
-                    <img src="{% static 'img/bday.jpg' %}" alt="" class="materialboxed responsive-img">
-                </div>
-                <div class="col s12 m3">
-                    <img src="{% static 'img/bday.jpg' %}" alt="" class="materialboxed responsive-img">
-                </div>
-            </div>
-                <div class="row">
-                    <div class="col s12 m3">
-                        <img src="{% static 'img/bday.jpg' %}" alt="" class="materialboxed responsive-img">
-                    </div>
-                    <div class="col s12 m3">
-                        <img src="{% static 'img/bday.jpg' %}" alt="" class="materialboxed responsive-img">
-                    </div>
-                    <div class="col s12 m3">
-                        <img src="{% static 'img/bday.jpg' %}" alt="" class="materialboxed responsive-img">
-                    </div>
-                    <div class="col s12 m3">
-                        <img src="{% static 'img/bday.jpg' %}" alt="" class="materialboxed responsive-img">
-                    </div>
-                </div>
         </div>
-        <a href="#" class="waves-effect waves-light btn">more cakes</a>
-    </section>
+        <a href="{% url 'pages:gallery' %}" class="waves-effect waves-light btn">more cakes</a>
+    </section> -->
 {% endblock %}
